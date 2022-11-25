@@ -5,3 +5,4 @@ sorting-algorithms/countingSort.exe
 sorting-algorithms/radixSort.exe
 sorting-algorithms/bucketSort.exe
 matrix/printInSnakePattern.exe
+matrix/printBoundary.exe
