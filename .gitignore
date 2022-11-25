@@ -6,3 +6,4 @@ sorting-algorithms/radixSort.exe
 sorting-algorithms/bucketSort.exe
 matrix/printInSnakePattern.exe
 matrix/printBoundary.exe
+matrix/transposeMatrix.exe
