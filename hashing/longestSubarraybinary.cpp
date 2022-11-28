@@ -33,6 +33,7 @@ int longSub(int arr[], int n){
     unordered_map<int, int> mp;
     int pre_sum =0, res = 0;
     for(int i = 0; i < n; i++){
+        
         if(arr[i] == 0) 
             arr[i]= -1;}
     
