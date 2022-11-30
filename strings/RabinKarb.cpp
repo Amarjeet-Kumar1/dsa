@@ -8,6 +8,8 @@ const int d = 256;
 // if it is same then its compare individual char
 //and slide the window
 
+//O((n-m+1)*m)
+
 void RBSearch(string txt, string pat){
     int n = txt.length(), m = pat.length();
     
