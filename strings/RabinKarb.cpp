@@ -51,6 +51,7 @@ void RBSearch(string txt, string pat){
             if(t < 0) t = t + q;
 
         }
+        
     }
 
 }
