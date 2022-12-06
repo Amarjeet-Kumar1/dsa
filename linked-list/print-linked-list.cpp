@@ -12,6 +12,7 @@ struct Node{
 };
 
 //print all node of list 
+//O(n) time and O(1) auxilary space
 void printList(Node *head){
     //assign head to curr
     Node *curr = head;
@@ -24,6 +25,7 @@ void printList(Node *head){
 }
 
 //print all node of list recursively
+//O(n) time and O(n) auxilary space
 void rPrint(Node *head){
     if(head == NULL)
         return;
