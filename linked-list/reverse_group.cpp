@@ -18,29 +18,32 @@ void printLL(Node *head){
     cout<<endl;
 }
 
-Node *removeDuplicate(Node *head){
-    if(head == NULL) return head;
-    Node *curr = head;
-    while(curr->next != NULL){
-        if(curr->data == curr->next->data){
-            Node *temp = curr->next;
-            curr->next = curr->next->next;
-            delete temp;
-        } else {
-            curr = curr->next;
-        }
-        
+Node *reverseK(Node *head, int k){
+    Node *curr = head, *prev = NULL, *next = NULL;
+    int count = 0;
+    while(curr != NULL && count < k){
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+        count++;
     }
-    return head;
-} 
+    if(next != NULL){
+        Node *rest_head = reverseK(next, k);
+        head->next = rest_head;
+    }
+    return prev;
+}
 
 int main(){
     Node *head =  new Node(10);
     head->next = new Node(20);
-    head->next->next = new Node(20);
-    head->next->next->next = new Node(20);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
+    head->next->next->next->next = new Node(50);
+    int k = 3;
     printLL(head);
-    head = removeDuplicate(head);
+    head = reverseK(head, k);
     printLL(head);
     return 0;
 }
